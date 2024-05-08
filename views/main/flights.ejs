@@ -1,0 +1,40 @@
+<section class="flights">
+    <% if (flights.length) { %>
+    <% flights.forEach(flight => { %>
+        <div class="flight" data-flight-id="<%= flight.flight_id%>">
+            <div class="date-from">
+                <p><%= flight.departure_time %></p>
+                <p><%= flight.departure_date %></p>
+            </div>
+            <p class="time"><%= flight.total_time %></p>
+            <div class="date-to">
+                <p><%= flight.time_end %></p>
+                <p><%= flight.date_end %></p>
+            </div>
+            <p class="point-from"><%= flight.start_point %></p>
+            <p class="point-to"><%= flight.end_point %></p>
+            <a class="btn-seat show-seat"><p class="show-seat">Выбрать место</p></a>
+        </div>
+        <div class="extra-info">
+            <div class="box-seat">
+                <label for="seat">Выберите пассажирское место:</label> <br>
+                <select id="seat" name="seat">
+                    <% for (let i = 1; i <= flight.seats; i++) {
+                        if (flight.closeSeats.includes(i)) continue;
+                    %>
+                    <option value="<%= i %>"><%= i %></option>
+                    <% } %>
+                </select>
+            </div>
+            <div class="cost">
+                <p>Стоимость билета:</p>
+                <p><%= flight.cost %> руб.</p>
+            </div>
+            <button class="buy" data-flight-id="<%= flight.flight_id%>">Купить</button>
+        </div>
+    <% });} else { %>
+        <div class="message-flight">
+            <p>Рейсов не найдено</p>
+        </div>
+    <% } %>
+</section>

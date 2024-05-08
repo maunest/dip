@@ -1,0 +1,22 @@
+<div class="back"></div>
+<div class="profile">
+    <img class="close" src="/icon/close.png" alt="">
+    <p class="title">Личные данные</p>
+        <div class="profile-info">
+            <form action="/profile/change" method="POST" id="profileForm">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" value="<%= userInfo.first_name %>">
+                <label for="surname">Фамилия</label>
+                <input type="text" id="surname" name="surname" value="<%= userInfo.last_name %>">
+                <label for="patronymic">Отчество</label>
+                <input type="text" id="patronymic" name="patronymic" value="<%= userInfo.patronymic %>">
+                <label for="passport">Пасспорт</label>
+                <input type="text" id="passport" name="passport" value="<%= userInfo.passport %>">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="<%= userInfo.email %>">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password">
+                <input type="submit" class="button-profile" value="Сохранить">
+            </form>
+        </div>
+</div>

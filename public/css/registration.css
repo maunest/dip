@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: italic;
+    src: url('../fonts/Roboto-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: italic;
+    src: url('../fonts/Roboto-BoldItalic.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Стили для формы */
+.form-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    width: 400px;
+    height: 670px;
+    margin: 0 auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+/* Стили для заголовка формы */
+.form-box h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Стили для меток */
+label {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    margin-bottom: 5px;
+    top: 35px;
+    left: 100px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Стили для полей ввода */
+input:not([type="submit"]) {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px;
+    width: 200px;
+    margin: 0 auto 10px;
+
+}
+
+input[name=password] {
+    margin-bottom: 40px;
+}
+
+/* Стили для кнопки */
+input[type="submit"] {
+    margin: 0 auto;
+    display: block;
+    border: 2px solid #3366cc;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: #3366cc;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Стили для наведения на кнопку */
+input[type="submit"]:hover {
+    background-color: #3366cc;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.back {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s ease-in-out;
+    background-color: #56565680;
+}
+
+.message {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+    width: 600px;
+    height: 300px;
+
+    background-color: #6780af;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    transition: all 1s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message-text {
+    font-size: 36px;
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+}
+
+.close {
+    width: 60px;
+    margin-left: 500px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    transition: all 1s ease-in-out;
+}
+
+.close:hover {
+    transform: scale(1.1);
+}
+
+.uncorrected {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+}
+
+.corrected {
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
+}

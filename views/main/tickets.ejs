@@ -1,0 +1,13 @@
+<div class="back"></div>
+<div class="all_ticket">
+    <img class="close" src="/icon/close.png" alt="">
+    <p>Купленные билеты</p>
+    <% tickets.forEach(ticket => { %>
+    <div class="ticket">
+        <p class="date-ticket"><%= ticket.date %></p>
+        <p class="date-from-ticket"><%= ticket.pointFrom %></p>
+        <p class="date-to-ticket"><%= ticket.pointTo %></p>
+        <button class="button-ticket" data-ticket-id="<%= ticket.id %>">Подробнее</button>
+    </div>
+    <% }); %>
+</div>

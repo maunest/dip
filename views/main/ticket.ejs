@@ -1,0 +1,19 @@
+<div class="back2"></div>
+<div class="one-ticket">
+    <img class="close" src="/icon/close.png" alt="">
+    <p class="title">Автобусный билет</p>
+    <p>Номер билета: <%= oneTicket.ticket_id %></p>
+    <p>Номер рейса: <%= oneTicket.flight_id %></p>
+    <p>Номер маршрута: <%= oneTicket.flight.route_id %></p>
+    <p>Пункт отправки: <%= oneTicket.point.departure_point %></p>
+    <p>Пункт назначения: <%= oneTicket.point.arrival_point %></p>
+    <p>Пассажирское место: <%= oneTicket.seat_number %></p>
+    <p>Дата отправления: <%= oneTicket.departure_date %></p>
+    <p>Время отправления: <%= oneTicket.departure_time %></p>
+    <p>Платформа: <%= oneTicket.platform %></p>
+    <p>Владелец: <%= oneTicket.user.last_name.charAt(0).toUpperCase() + oneTicket.user.last_name.substr(1).toLowerCase() + ' ' + 
+        oneTicket.user.first_name.charAt(0).toUpperCase() + oneTicket.user.first_name.substr(1).toLowerCase() + ' ' +
+        oneTicket.user.patronymic.charAt(0).toUpperCase() + oneTicket.user.patronymic.substr(1).toLowerCase()%></p>
+    <p>Цена: <%= oneTicket.cost %> руб</p>
+    <button class="buy-ticket">Сохранить в pdf</button>
+</div>
